@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by jacop on 19/11/2017.
  */
 
-public class Vehicle implements Serializable {
+public class Car implements Serializable {
     public VehicleType vehicle_type;
     public Integer total_price;
     public String currency;

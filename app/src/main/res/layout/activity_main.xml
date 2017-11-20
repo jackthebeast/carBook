@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="jacopo.com.carbook.MainActivity">
+    <data>
+        <variable name="viewModel" type="jacopo.com.carbook.MainViewModel" />
+    </data>
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jacopo.com.carbook.MainActivity"
     android:weightSum="10"
     android:orientation="vertical">
 
@@ -15,10 +18,31 @@
         android:layout_height="0dp"
         android:layout_weight="6" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/car_list"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4" />
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/list_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <ProgressBar
+            android:id="@+id/loading_cars_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cars_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
 
 </LinearLayout>
+</layout>

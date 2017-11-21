@@ -1,0 +1,3 @@
+The app uses the MVVM pattern. I omitted the Repository layer and the ViewModels for the single list items for semplicity as I didn't really need them in this case.
+
+The first tap on the map set the origin of the route and the second set the destination. The merkers can be dragged to chenge them later. The vehicle's list is updated accordingly. In case of error, a TextView with the catched exception will be shown instead of the list.
